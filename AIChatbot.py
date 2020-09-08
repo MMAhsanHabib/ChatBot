@@ -24,11 +24,14 @@ sentence_list = nltk.sent_tokenize(text)
 
 #print(sentence_list)
 
+# A function to return a random greeting response to a users greeting
 def greeting_response(text):
     text = text.lower()
     
+    #Bots greeting response
     bot_greetings = ['hi','hey','hello','howdy']
     
+    #Users greeting response
     user_greetings = ['hi', 'hey', 'hello', 'wassup']
     
     for word in text.split():
@@ -51,7 +54,7 @@ def index_sort(list_var):
     return list_index
         
         
-        
+# Create the bot response        
 def bot_response(user_input):
     user_input = user_input.lower()
     sentence_list.append(user_input)
@@ -79,7 +82,8 @@ def bot_response(user_input):
         
     return bot_response
 
-print('Bot: I am bot. I will answere you. Ask me your queries.')
+# Start the chat
+print('Bot: I am bot. I will answere you. Ask me your queries. If you want to exit type bye.')
 exit_list = ['exit','see you later','bye','quit','break']
 
 while(True):
